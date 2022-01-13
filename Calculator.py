@@ -1,7 +1,7 @@
-
 def add(x, y):
     sum = x + y
     return sum
+
 
 
 def subtract(x, y):
@@ -9,23 +9,35 @@ def subtract(x, y):
     return sum
 
 
+
 def divide(x, y):
     sum = x / y
     return sum
+
 
 
 def multiply(x, y):
     sum = x * y
     return sum
 
+
+
 sum = 0
 
+
+
 Options = [add.__name__, subtract.__name__, divide.__name__, multiply.__name__]
+
+
 
 for i in range(len(Options)):
     print(Options[i])
 
+    
+    
 Selection = input("Type selection from options above or exit ")
+
+
 
 while Selection != "exit":
 
@@ -39,7 +51,6 @@ while Selection != "exit":
             sum = add(num1, num2)
             print(f"{num1} + {num2} = {sum}")
 
-
     elif Selection == "subtract":
         num1 = int(input("Select a number "))
         if sum != 0:
@@ -49,7 +60,6 @@ while Selection != "exit":
             num2 = int(input("Select second number "))
             sum = subtract(num1, num2)
             print(f" {num1} - {num2} = {sum} ")
-
 
     elif Selection == "divide":
         num1 = int(input("Select a number "))
@@ -71,8 +81,19 @@ while Selection != "exit":
             sum = multiply(num1, num2)
             print(f"{num1} * {num2} = {sum} ")
 
+    
+    
     print("x" * 30)
+    
+    
+    
     for i in range(len(Options)):
         print(Options[i])
+    
+    
+    
     print("Your current sum is:", sum)
+    
+    
+    
     Selection = input("Type selection from options above or exit ")
